@@ -1,0 +1,11 @@
+# 更改 .proto 文件后，需要执行以下命令
+'''
+命令参数说明：
+
+-I=./proto：指定 proto 文件的 import 路径。
+--python_out=.：生成普通的 protobuf Python 文件（如 user_pb2.py）。
+--grpc_python_out=.：生成 gRPC 相关的 Python 文件（如 user_pb2_grpc.py）。
+./proto/user.proto：要编译的 proto 文件路径。
+'''
+
+python -m grpc_tools.protoc -I=./proto --python_out=. --grpc_python_out=. ./proto/user.proto
