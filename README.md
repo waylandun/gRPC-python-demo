@@ -35,7 +35,7 @@ python -m grpc_tools.protoc -I=./proto --python_out=. --grpc_python_out=. ./prot
 4. **启动 gRPC 服务端**
 
 ```bash
-python main.py
+python servers.py
 ```
 
 5. **运行客户端示例**
